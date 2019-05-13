@@ -1,13 +1,13 @@
 {
-  "main.css": "/pics/static/css/main.48afcfdb.chunk.css",
-  "main.js": "/pics/static/js/main.f66520a8.chunk.js",
-  "main.js.map": "/pics/static/js/main.f66520a8.chunk.js.map",
-  "runtime~main.js": "/pics/static/js/runtime~main.f694050d.js",
-  "runtime~main.js.map": "/pics/static/js/runtime~main.f694050d.js.map",
-  "static/js/2.b4379b99.chunk.js": "/pics/static/js/2.b4379b99.chunk.js",
-  "static/js/2.b4379b99.chunk.js.map": "/pics/static/js/2.b4379b99.chunk.js.map",
-  "index.html": "/pics/index.html",
-  "precache-manifest.ac06daef3c593419b62d218aeb2e7755.js": "/pics/precache-manifest.ac06daef3c593419b62d218aeb2e7755.js",
-  "service-worker.js": "/pics/service-worker.js",
-  "static/css/main.48afcfdb.chunk.css.map": "/pics/static/css/main.48afcfdb.chunk.css.map"
+  "main.css": "/react-image-search/static/css/main.48afcfdb.chunk.css",
+  "main.js": "/react-image-search/static/js/main.b58970e0.chunk.js",
+  "main.js.map": "/react-image-search/static/js/main.b58970e0.chunk.js.map",
+  "runtime~main.js": "/react-image-search/static/js/runtime~main.2eb3ebe6.js",
+  "runtime~main.js.map": "/react-image-search/static/js/runtime~main.2eb3ebe6.js.map",
+  "static/js/2.b4379b99.chunk.js": "/react-image-search/static/js/2.b4379b99.chunk.js",
+  "static/js/2.b4379b99.chunk.js.map": "/react-image-search/static/js/2.b4379b99.chunk.js.map",
+  "index.html": "/react-image-search/index.html",
+  "precache-manifest.b4a6096664324b73f23ffd960f5055df.js": "/react-image-search/precache-manifest.b4a6096664324b73f23ffd960f5055df.js",
+  "service-worker.js": "/react-image-search/service-worker.js",
+  "static/css/main.48afcfdb.chunk.css.map": "/react-image-search/static/css/main.48afcfdb.chunk.css.map"
 }
