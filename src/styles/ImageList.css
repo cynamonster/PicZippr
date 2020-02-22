@@ -8,3 +8,15 @@
 .image-list img {
     width: 250px;
 }
+
+.title {
+    color: #fafafa;
+}
+
+.subtitle {
+    color: #fafafa;
+}
+
+.gradient {
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1));
+}

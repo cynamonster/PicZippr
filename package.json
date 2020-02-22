@@ -4,17 +4,22 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "jszip": "^3.2.2",
+    "jszip-utils": "^0.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8"
+    "react-grid-gallery": "^0.5.5",
+    "react-scripts": "2.1.8",
+    "save-as": "^0.1.8",
+    "semantic-ui-react": "^0.88.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-      "predeploy": "yarn build",
-	"deploy": "gh-pages -d build"
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
