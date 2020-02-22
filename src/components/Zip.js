@@ -9,15 +9,23 @@ import {Button} from 'semantic-ui-react'
 
 const zipFilename = "images-cynamonster.zip";
 
-const Zip = (props) => {
-    const urlZip = () => {
-        const {images, searchTerm} = props;
+export default class Zip extends React.Component {
+    state = {
+        loading: false
+    };
+
+    urlZip = () => {
+        this.setState({
+            loading: true
+        });
+
+        const {images, searchTerm} = this.props;
         const formattedSearchTerm = searchTerm.replace(' ','-');
 
         var zip = new JSZip();
         var count = 0;
         var zipFilename = images.length + "_" + formattedSearchTerm + "_images.zip";
-        var urls = getUrls();
+        var urls = this.getUrls();
         
         urls.forEach(function(url, index){
           var filename = formattedSearchTerm + "_" + (index + 1) + '.png';
@@ -31,7 +39,6 @@ const Zip = (props) => {
                     zip.file(filename, data, {binary:true});
                     count++;
                     if (count == urls.length) {
-                        // console.log(zip.files)
                         zip.generateAsync({type:'blob'}).then(function(content) {
                             saveAs(content, zipFilename);
                         });
@@ -39,11 +46,14 @@ const Zip = (props) => {
                 });
             })
         })
+        // this.setState({
+        //     loading: false
+        // })
     };
 
-    const getUrls = () => {
-        const {images} = props;
-        console.log(images)
+    getUrls = () => {
+        const {images} = this.props;
+
         let urls = [];
         images.map((image) => {
             urls.push(image.links.download_location);
@@ -52,9 +62,9 @@ const Zip = (props) => {
         return urls;
     }
 
-    const getLargeUrls = () => {
-        const {images} = props;
-        console.log(images)
+    getLargeUrls = () => {
+        const {images} = this.props;
+
         let urls = [];
         images.map((image) => {
             urls.push(image.urls.thumb);
@@ -63,27 +73,32 @@ const Zip = (props) => {
         return urls;
     }
 
-    const getFileName = () => {
-        const {searchTerm, images} = props;
+    getFileName = () => {
+        const {searchTerm, images} = this.props;
         return images.length + '_' + searchTerm + '_images';
     }
 
-    const buttonIcon = !props.images.length > 0
-        ? ''
-        : 'download';
-    const buttonContent = !props.images.length > 0
-        ? 'Search Images...'
-        : ' Download Zip'
+    render() {
+        const buttonIcon = !this.props.images.length > 0
+            ? ''
+            : 'download';
+        const buttonContent = !this.props.images.length > 0
+            ? 'Search Images...'
+            : ' Download Zip'
 
-    return (
-        <Button 
-            fluid
-            positive
-            disabled={!props.images.length > 0}
-            icon={buttonIcon}
-            size='big'
-            content={buttonContent}
-        />
+        return (
+            <Button 
+                fluid
+                loading={this.state.loading}
+                positive
+                disabled={!this.props.images.length > 0}
+                icon={buttonIcon}
+                size='big'
+                content={buttonContent}
+                onClick={this.urlZip}
+            />
+        )
+    }
         // <div className="ui labeled fluid button" tabIndex="0" onClick={urlZip}>
         //     <div className="ui red button" style={{height: 'unset'}}>
         //         <i className="download icon"></i> Large
@@ -92,6 +107,4 @@ const Zip = (props) => {
         //         1,048 mb
         //     </a>
         // </div>
-    )    
 };
-export default Zip;
