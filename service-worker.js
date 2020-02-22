@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/PicZippr/precache-manifest.1d34650051d80b831d91451b2b8f5c3a.js"
+  "/PicZippr/precache-manifest.7e81a2b8af34c6206c2a6073a21f7d14.js"
 );
 
 workbox.clientsClaim();
