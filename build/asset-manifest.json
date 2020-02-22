@@ -1,13 +1,13 @@
 {
-  "main.css": "/react-image-search/static/css/main.aa976d64.chunk.css",
-  "main.js": "/react-image-search/static/js/main.965e0dbe.chunk.js",
-  "main.js.map": "/react-image-search/static/js/main.965e0dbe.chunk.js.map",
-  "runtime~main.js": "/react-image-search/static/js/runtime~main.9c665905.js",
-  "runtime~main.js.map": "/react-image-search/static/js/runtime~main.9c665905.js.map",
-  "static/js/2.7de11d2a.chunk.js": "/react-image-search/static/js/2.7de11d2a.chunk.js",
-  "static/js/2.7de11d2a.chunk.js.map": "/react-image-search/static/js/2.7de11d2a.chunk.js.map",
-  "index.html": "/react-image-search/index.html",
-  "precache-manifest.a7b9741643ff1dc0d8ea194b98d58cb2.js": "/react-image-search/precache-manifest.a7b9741643ff1dc0d8ea194b98d58cb2.js",
-  "service-worker.js": "/react-image-search/service-worker.js",
-  "static/css/main.aa976d64.chunk.css.map": "/react-image-search/static/css/main.aa976d64.chunk.css.map"
+  "main.css": "/PicZippr/static/css/main.aa976d64.chunk.css",
+  "main.js": "/PicZippr/static/js/main.965e0dbe.chunk.js",
+  "main.js.map": "/PicZippr/static/js/main.965e0dbe.chunk.js.map",
+  "runtime~main.js": "/PicZippr/static/js/runtime~main.ad44effa.js",
+  "runtime~main.js.map": "/PicZippr/static/js/runtime~main.ad44effa.js.map",
+  "static/js/2.7de11d2a.chunk.js": "/PicZippr/static/js/2.7de11d2a.chunk.js",
+  "static/js/2.7de11d2a.chunk.js.map": "/PicZippr/static/js/2.7de11d2a.chunk.js.map",
+  "index.html": "/PicZippr/index.html",
+  "precache-manifest.06b4c7169286da85af8f76444a45c046.js": "/PicZippr/precache-manifest.06b4c7169286da85af8f76444a45c046.js",
+  "service-worker.js": "/PicZippr/service-worker.js",
+  "static/css/main.aa976d64.chunk.css.map": "/PicZippr/static/css/main.aa976d64.chunk.css.map"
 }
