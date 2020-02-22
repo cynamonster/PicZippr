@@ -1,6 +1,6 @@
 # React-powered Unsplash API Image Search
 
-### [Try it out](http://cynamonster.github.io/react-image-search)
+### [Try it out](http://cynamonster.github.io/PicZippr)
 
 ![gif](src/youtube-react.gif "gif")
 
