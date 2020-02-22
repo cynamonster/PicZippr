@@ -26,29 +26,32 @@ export default class Zip extends React.Component {
         var count = 0;
         var zipFilename = images.length + "_" + formattedSearchTerm + "_images.zip";
         var urls = this.getUrls();
-        
+      
         urls.forEach(function(url, index){
-          var filename = formattedSearchTerm + "_" + (index + 1) + '.png';
-          // loading a file and add it in a zip file
-          unsplash.get(url)
-            .then(res => {
-                JSZipUtils.getBinaryContent(res.data.url, function (err, data) {
-                    if(err) {
-                        throw err; // or handle the error
-                    }
-                    zip.file(filename, data, {binary:true});
-                    count++;
-                    if (count == urls.length) {
-                        zip.generateAsync({type:'blob'}).then(function(content) {
-                            saveAs(content, zipFilename);
-                        });
-                    }
-                });
-            })
+            var filename = formattedSearchTerm + "_" + (index + 1) + '.png';
+            // loading a file and add it in a zip file
+            unsplash.get(url)
+                .then(res => {
+                    JSZipUtils.getBinaryContent(res.data.url, function (err, data) {
+                        if(err) {
+                            throw err; // or handle the error
+                        }
+                        zip.file(filename, data, {binary:true});
+                        count++;
+                        if (count == urls.length) {
+                            zip.generateAsync({type:'blob'}).then(function(content) {
+                                saveAs(content, zipFilename);
+                            });
+                        }
+                    });
+                })
         })
-        // this.setState({
-        //     loading: false
-        // })
+
+        setTimeout(() => {
+            this.setState({
+                loading: false
+            });
+        }, 2000)
     };
 
     getUrls = () => {
