@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import '../styles/zip.css'
 import JSZip from 'jszip'
 import JSZipUtils from 'jszip-utils'
@@ -35,7 +35,7 @@ export default class Zip extends React.Component {
                         }
                         zip.file(filename, data, {binary:true});
                         count++;
-                        if (count == urls.length) {
+                        if (count === urls.length) {
                             resolve();
                             zip.generateAsync({type:'blob'}).then(function(content) {
                                 saveAs(content, zipFilename);

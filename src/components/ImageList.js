@@ -2,8 +2,6 @@ import React from 'react';
 import '../styles/ImageList.css';
 import Gallery from 'react-grid-gallery';
 
-const NUMBER_OF_PREVIEW_IMAGES = 4;
-
 const imageFormatter = (image) => {
     return {
         'src': image.urls.raw,
@@ -25,11 +23,3 @@ const ImageList = props => {
 }
 
 export default ImageList;
-
-// <div className="ui attached stackable container">
-            // <h1 className="ui blue centered header">Image Preview</h1>
-            // {imageCount}
-            // {/* <div className="ui stackable padded two column grid"> */}
-                // {/* {renderImages} */}
-            // {/* </div> */}
-        // </div>

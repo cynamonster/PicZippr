@@ -3,10 +3,7 @@ import unsplash from '../api/unsplash';
 import SearchBar from './SearchBar';
 import ImageList from './ImageList';
 import Zip from './Zip';
-import {Button, Icon} from 'semantic-ui-react'
-
-import {Container, Grid, Header, Segment} from 'semantic-ui-react'
-// import '../styles/styles.css';
+import {Container, Header, Segment} from 'semantic-ui-react'
 
 const DELL_PROFILE_LINK = 'https://www.wendellfernandes.com/';
 const BEN_PROFILE_LINK = 'https://www.linkedin.com/in/bencynamon/';

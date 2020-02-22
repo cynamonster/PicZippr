@@ -1,13 +1,3 @@
-.content-container {
-    /* margin-top: 40; */
-    /* display: flex; */
-    /* flex-direction: 'row'; */
-}
-
-.rounded-search {
-    margin-bottom: 40px;
-}
-
 .dark-search::placeholder {
     color: #fafafa;
 }
