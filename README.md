@@ -1,9 +1,10 @@
-# React-powered Unsplash API Image Search
+http://cynamonster.github.io/PicZippr
 
-### [Try it out](http://cynamonster.github.io/PicZippr)
-
-![gif](src/youtube-react.gif "gif")
-
-Entering a word or phrase will query a GET request to the Unsplash API, returning a maximum of 10 images.
-This request is completed with the Axios HTTP client.
-The app utilizes CSS Flex, Grid, and the [Semantic UI](http://semantic-ui.com) stylesheet.
+### To Do:
+- Improve loading state.
+- Create API failure state.
+- Add Logo to site.
+- Deploy app to http://piczippr.com
+- Add Attributions and 'Buy Us a Coffee' link.
+- Apply for a higher Unsplash API tier.
+- Implement Adsense.
