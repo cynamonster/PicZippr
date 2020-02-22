@@ -8,3 +8,4 @@ http://cynamonster.github.io/PicZippr
 - Add Attributions and 'Buy Us a Coffee' link.
 - Apply for a higher Unsplash API tier.
 - Implement Adsense.
+- Search on second field blur.
