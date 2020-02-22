@@ -1,13 +1,13 @@
 {
   "main.css": "/PicZippr/static/css/main.aa976d64.chunk.css",
-  "main.js": "/PicZippr/static/js/main.965e0dbe.chunk.js",
-  "main.js.map": "/PicZippr/static/js/main.965e0dbe.chunk.js.map",
+  "main.js": "/PicZippr/static/js/main.d999c7ec.chunk.js",
+  "main.js.map": "/PicZippr/static/js/main.d999c7ec.chunk.js.map",
   "runtime~main.js": "/PicZippr/static/js/runtime~main.ad44effa.js",
   "runtime~main.js.map": "/PicZippr/static/js/runtime~main.ad44effa.js.map",
-  "static/js/2.7de11d2a.chunk.js": "/PicZippr/static/js/2.7de11d2a.chunk.js",
-  "static/js/2.7de11d2a.chunk.js.map": "/PicZippr/static/js/2.7de11d2a.chunk.js.map",
+  "static/js/2.6fdcfe8b.chunk.js": "/PicZippr/static/js/2.6fdcfe8b.chunk.js",
+  "static/js/2.6fdcfe8b.chunk.js.map": "/PicZippr/static/js/2.6fdcfe8b.chunk.js.map",
   "index.html": "/PicZippr/index.html",
-  "precache-manifest.06b4c7169286da85af8f76444a45c046.js": "/PicZippr/precache-manifest.06b4c7169286da85af8f76444a45c046.js",
+  "precache-manifest.9b7f620afe3d2e60b96fba9777f410e5.js": "/PicZippr/precache-manifest.9b7f620afe3d2e60b96fba9777f410e5.js",
   "service-worker.js": "/PicZippr/service-worker.js",
   "static/css/main.aa976d64.chunk.css.map": "/PicZippr/static/css/main.aa976d64.chunk.css.map"
 }
