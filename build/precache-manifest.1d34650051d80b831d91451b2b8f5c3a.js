@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/PicZippr/static/js/runtime~main.ad44effa.js"
   },
   {
-    "revision": "626ffabd50c4d511ccc8",
-    "url": "/PicZippr/static/js/main.d999c7ec.chunk.js"
+    "revision": "c78d6a4dd3e9e5257ffc",
+    "url": "/PicZippr/static/js/main.337f721e.chunk.js"
   },
   {
     "revision": "0577d6971cbb034c6130",
     "url": "/PicZippr/static/js/2.6fdcfe8b.chunk.js"
   },
   {
-    "revision": "626ffabd50c4d511ccc8",
-    "url": "/PicZippr/static/css/main.aa976d64.chunk.css"
+    "revision": "c78d6a4dd3e9e5257ffc",
+    "url": "/PicZippr/static/css/main.23aa218b.chunk.css"
   },
   {
-    "revision": "724a56e75b2f29933a4c1e173493efa4",
+    "revision": "352464c8677a04cb98e3f66420f60cf6",
     "url": "/PicZippr/index.html"
   }
 ];
