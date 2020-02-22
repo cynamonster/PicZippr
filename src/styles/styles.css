@@ -8,6 +8,6 @@
     margin-bottom: 40px;
 }
 
-.dark-search {
-    background-color: #333;
+.dark-search::placeholder {
+    color: #fafafa;
 }

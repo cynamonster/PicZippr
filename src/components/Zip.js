@@ -2,12 +2,9 @@ import React, { Component } from 'react'
 import '../styles/zip.css'
 import JSZip from 'jszip'
 import JSZipUtils from 'jszip-utils'
-import { render } from 'react-dom';
 import { saveAs } from 'save-as';
 import unsplash from '../api/unsplash';
 import {Button} from 'semantic-ui-react'
-
-const zipFilename = "images-cynamonster.zip";
 
 export default class Zip extends React.Component {
     state = {
@@ -27,9 +24,9 @@ export default class Zip extends React.Component {
         var zipFilename = images.length + "_" + formattedSearchTerm + "_images.zip";
         var urls = this.getUrls();
       
-        urls.forEach(function(url, index){
+        const getImages = new Promise((resolve, reject) => {
+            urls.forEach(function(url, index){
             var filename = formattedSearchTerm + "_" + (index + 1) + '.png';
-            // loading a file and add it in a zip file
             unsplash.get(url)
                 .then(res => {
                     JSZipUtils.getBinaryContent(res.data.url, function (err, data) {
@@ -39,19 +36,21 @@ export default class Zip extends React.Component {
                         zip.file(filename, data, {binary:true});
                         count++;
                         if (count == urls.length) {
+                            resolve();
                             zip.generateAsync({type:'blob'}).then(function(content) {
                                 saveAs(content, zipFilename);
                             });
                         }
                     });
                 })
+            })
         })
 
-        setTimeout(() => {
+        getImages.then(() => {
             this.setState({
                 loading: false
-            });
-        }, 2000)
+            })
+        });
     };
 
     getUrls = () => {
@@ -102,12 +101,4 @@ export default class Zip extends React.Component {
             />
         )
     }
-        // <div className="ui labeled fluid button" tabIndex="0" onClick={urlZip}>
-        //     <div className="ui red button" style={{height: 'unset'}}>
-        //         <i className="download icon"></i> Large
-        //     </div>
-        //     <a className="ui basic red left pointing label">
-        //         1,048 mb
-        //     </a>
-        // </div>
 };

@@ -1,11 +1,8 @@
 import React from 'react';
 import '../styles/ImageList.css';
-import ImageCard from './ImageCard';
 import Gallery from 'react-grid-gallery';
 
 const NUMBER_OF_PREVIEW_IMAGES = 4;
-
-
 
 const imageFormatter = (image) => {
     return {
@@ -13,30 +10,17 @@ const imageFormatter = (image) => {
         'thumbnail': image.urls.thumb,
         'thumbnailWidth': image.width,
         'thumbnailHeight': image.height,
-        'caption': image.user.portfolio_url ?  'Photo by ' + image.user.name + '. ' + image.user.portfolio_url : ''
+        'caption': <p>Photo by <a href={image.user.links.portfolio + '?utm_source=yPicZippr&utm_medium=referral'}>{image.user.name}</a> on <a href="https://unsplash.com/?utm_source=PicZippr&utm_medium=referral">Unsplash</a></p>
     }
 }
 
 const ImageList = props => {
     const {images} = props;
-    
-    const IMAGES = images.length > 0 ? images.map((image) => imageFormatter(image)) : [];
-    // console.log(IMAGES)
-    const renderImages = images.map((image, index) => {
-        if (index > NUMBER_OF_PREVIEW_IMAGES - 1) {
-            return null;
-        }
-        return <ImageCard key={image.id} image={image} />
-    });
 
-    const imageCount = images.length > 0 
-        ? <h3 className="ui blue centered header">{images.length} images found! Here's the first 4:</h3> 
-        : props.term
-            ? <h3 className="ui blue centered header">No "{props.term}" images found.</h3>
-            : <h2 className="ui blue centered header">. . .</h2>;
+    const IMAGES = images.length > 0 ? images.map((image) => imageFormatter(image)) : [];
 
     return IMAGES.length > 0 
-        ? <Gallery images={IMAGES} enableImageSelection={false}  />
+        ? <Gallery images={IMAGES} enableImageSelection={false} backdropClosesModal />
         : null;
 }
 

@@ -26,8 +26,8 @@ class SearchBar extends React.Component {
     
     onNumberChange = (event) => {
         const {value} = event.target;
-        if (value > 200) {
-            this.setState({ number: 200 })
+        if (value > this.props.maxNumber) {
+            this.setState({ number: this.props.maxNumber })
         } else {
             this.setState({ number: value })
         }
@@ -56,10 +56,12 @@ class SearchBar extends React.Component {
                                 <label>Number of Images</label>
                                 <Input 
                                     ref={(input) => {this.numberInput = input}}
+                                    onBlur={this.onFormSubmit}
                                     icon={<Icon name='search' />}
                                     value={this.state.number}
                                     onChange={this.onNumberChange} 
-                                    placeholder='Maximum of 200'
+                                    placeholder={`Search for up to ${this.props.maxNumber} images...`}
+                                    className="dark-search"
                                     type='number'
                                 />
                             </Form.Field>
@@ -67,20 +69,6 @@ class SearchBar extends React.Component {
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
-
-                // <form className="ui segment" onSubmit={ this.onFormSubmit }>
-                    // <div className="ui action input">
-                    //     <input 
-                    //         placeholder='Search...'
-                    //         type="text" 
-                    //         value={this.state.term} 
-                
-                    //     />
-                    //     <div className="ui green large icon button">
-                    //         Download {this.props.number} Images &nbsp; <i className="angle down icon" />
-                    //     </div>
-                    // </div>
-                // </form>
         );
     }
 }
