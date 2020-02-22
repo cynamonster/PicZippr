@@ -16,13 +16,15 @@ class App extends React.Component {
     state = {
         images: [],
         searchTerm: '',
-        desiredNumberOfImages: null
+        desiredNumberOfImages: null,
+        loading: false
     };
 
     onSearchSubmit = (term, number) => {
         this.setState({
             searchTerm: term,
-            desiredNumberOfImages: number
+            desiredNumberOfImages: number,
+            loading: true
         }, () => {
             unsplash.get('search/photos', {
                 params: {
@@ -31,7 +33,10 @@ class App extends React.Component {
                 }
             }).then((response) => {
                 console.log(response)
-                this.setState({ images: response.data.results });
+                this.setState({ 
+                    images: response.data.results,
+                    loading: false
+                });
             });
         });
     };
@@ -80,7 +85,9 @@ class App extends React.Component {
                 </Segment>
 
                 <Segment textAlign='center' inverted>
-                    <Zip images={this.state.images} searchTerm={this.state.searchTerm} />
+                    <Zip images={this.state.images} 
+                        searchTerm={this.state.searchTerm} 
+                        loading={this.state.loading} />
                 </Segment>
 
                 

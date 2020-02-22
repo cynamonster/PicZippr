@@ -91,7 +91,7 @@ export default class Zip extends React.Component {
         return (
             <Button 
                 fluid
-                loading={this.state.loading}
+                loading={this.state.loading || this.props.loading}
                 positive
                 disabled={!this.props.images.length > 0}
                 icon={buttonIcon}
