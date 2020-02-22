@@ -1,7 +1,7 @@
 http://cynamonster.github.io/PicZippr
 
 ### To Do:
-- Improve loading state.
+- ~Improve loading state.~
 - Create API failure state.
 - Add Logo to site.
 - Deploy app to http://piczippr.com
