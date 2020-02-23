@@ -25,20 +25,22 @@ export default class Zip extends React.Component {
         var urls = this.getUrls();
       
         const getImages = new Promise((resolve, reject) => {
-            urls.forEach(function(url, index){
+            urls.forEach((url, index) => {
             var filename = formattedSearchTerm + "_" + (index + 1) + '.png';
             unsplash.get(url)
                 .then(res => {
-                    JSZipUtils.getBinaryContent(res.data.url, function (err, data) {
+                    JSZipUtils.getBinaryContent(res.data.url, (err, data) => {
                         if(err) {
-                            throw err; // or handle the error
+                            this.props.handleError(err)
                         }
                         zip.file(filename, data, {binary:true});
                         count++;
                         if (count === urls.length) {
                             resolve();
-                            zip.generateAsync({type:'blob'}).then(function(content) {
-                                saveAs(content, zipFilename);
+                            zip.generateAsync({type:'blob'},(metaData) => {
+                                this.props.handleProgress(metaData.percent.toFixed())
+                            }).then(function(content) {
+                                // saveAs(content, zipFilename);
                             });
                         }
                     });
@@ -52,6 +54,12 @@ export default class Zip extends React.Component {
             })
         });
     };
+
+    getProgress = (metaData) => {
+        const fileName = metaData.percent;
+        console.log('fileName:', fileName)
+        // fileName[1]
+    }
 
     getUrls = () => {
         const {images} = this.props;
