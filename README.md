@@ -11,3 +11,4 @@ http://cynamonster.github.io/PicZippr
 - Implement Adsense.
 - ~Search on second field blur.~
 - If fewer images found than the desired number, notify user.
+- Investigate strange behavior while attempting to open an image lightbox during a zip.
