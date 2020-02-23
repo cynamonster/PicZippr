@@ -1,6 +1,6 @@
 import React from 'react';
-import unsplash from '../api/unsplash';
 import SearchBar from './SearchBar';
+import unsplash from '../api/unsplash';
 import ImageList from './ImageList';
 import Zip from './Zip';
 import {Container, Header, Segment, Grid} from 'semantic-ui-react'
