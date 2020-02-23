@@ -67,10 +67,9 @@ class App extends React.Component {
     render() {
         return(
             <Container>
-                <Segment textAlign='center' inverted circular>
-                </Segment>
+                <Segment textAlign='center' inverted></Segment>
             
-                <Segment textAlign='center' inverted style={{borderRadius: 100, width: '50%', margin: '0 auto', padding: '40 0'}}>
+                <Segment textAlign='center' inverted padded='very'>
                     <Header inverted as='h1'>{TEXT.headerText}</Header>
                     <p style={{color: '#fff'}}>{TEXT.subheaderText}</p>
                     <p style={{color: '#fff', opacity: .8}}>Created by <a href={DELL_PROFILE_LINK}>Dell</a> and <a href={BEN_PROFILE_LINK}>Ben</a></p>
