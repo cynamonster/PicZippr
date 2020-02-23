@@ -1,13 +1,13 @@
 {
   "main.css": "/PicZippr/static/css/main.99e1ff9b.chunk.css",
-  "main.js": "/PicZippr/static/js/main.aea40def.chunk.js",
-  "main.js.map": "/PicZippr/static/js/main.aea40def.chunk.js.map",
+  "main.js": "/PicZippr/static/js/main.6c89369e.chunk.js",
+  "main.js.map": "/PicZippr/static/js/main.6c89369e.chunk.js.map",
   "runtime~main.js": "/PicZippr/static/js/runtime~main.ad44effa.js",
   "runtime~main.js.map": "/PicZippr/static/js/runtime~main.ad44effa.js.map",
   "static/js/2.7ead23ce.chunk.js": "/PicZippr/static/js/2.7ead23ce.chunk.js",
   "static/js/2.7ead23ce.chunk.js.map": "/PicZippr/static/js/2.7ead23ce.chunk.js.map",
   "index.html": "/PicZippr/index.html",
-  "precache-manifest.c09438882334f72d973c45fa140793e3.js": "/PicZippr/precache-manifest.c09438882334f72d973c45fa140793e3.js",
+  "precache-manifest.d5cf527531dadf4213847c5fac7936ac.js": "/PicZippr/precache-manifest.d5cf527531dadf4213847c5fac7936ac.js",
   "service-worker.js": "/PicZippr/service-worker.js",
   "static/css/main.99e1ff9b.chunk.css.map": "/PicZippr/static/css/main.99e1ff9b.chunk.css.map"
 }
