@@ -87,6 +87,7 @@ class App extends React.Component {
                     <Zip images={this.state.images} 
                         searchTerm={this.state.searchTerm} 
                         loading={this.state.loading} 
+                        progress={this.state.progress}
                         handleProgress={this.handleProgress}
                         handleError={this.props.handleError} />
                 </Segment>

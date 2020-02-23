@@ -8,7 +8,8 @@ import {Button} from 'semantic-ui-react'
 
 export default class Zip extends React.Component {
     state = {
-        loading: false
+        loading: false,
+        progress: 0
     };
 
     urlZip = () => {
@@ -38,7 +39,9 @@ export default class Zip extends React.Component {
                         if (count === urls.length) {
                             resolve();
                             zip.generateAsync({type:'blob'},(metaData) => {
-                                this.props.handleProgress(metaData.percent.toFixed())
+                                this.setState({
+                                    progress: metaData.percent.toFixed(2)
+                                });
                             }).then(function(content) {
                                 // saveAs(content, zipFilename);
                             });
@@ -92,14 +95,14 @@ export default class Zip extends React.Component {
         const buttonIcon = !this.props.images.length > 0
             ? ''
             : 'download';
-        const buttonContent = !this.props.images.length > 0
-            ? 'Search Images...'
-            : ' Download Zip'
+        const buttonContent = this.state.progress > 0 && this.state.progress < 100
+            ? this.state.progress
+            : 'Download Zip'
 
         return (
             <Button 
                 fluid
-                loading={this.state.loading || this.props.loading}
+                loading={this.props.loading}
                 positive
                 disabled={!this.props.images.length > 0}
                 icon={buttonIcon}
