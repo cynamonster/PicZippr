@@ -12,3 +12,5 @@ http://cynamonster.github.io/PicZippr
 - ~Search on second field blur.~
 - If fewer images found than the desired number, notify user.
 - Investigate strange behavior while attempting to open an image lightbox during a zip.
+- Create 'No Results' state.
+- Tap on disabled button triggers search.
