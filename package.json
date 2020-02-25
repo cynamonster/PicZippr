@@ -31,7 +31,7 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "homepage": "http://cynamonster.github.io/PicZippr",
+  "homepage": "http://piczippr.com",
   "devDependencies": {
     "gh-pages": "^2.0.1"
   }

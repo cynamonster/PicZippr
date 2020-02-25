@@ -49,7 +49,10 @@ export default class Zip extends React.Component {
                                 this.setState({
                                     progress: metaData.percent.toFixed(2)
                                 });
-                            }).then(function(content) {
+                            }).then((content) => {
+                                this.setState({
+                                    loading: false
+                                })
                                 let mobileConfirmation = false;
 
                                 if (window.mobileAndTabletcheck()) {
@@ -74,6 +77,43 @@ export default class Zip extends React.Component {
             })
         });
     };
+
+    getLocalUrls = () => {
+        let urls = [
+            '../30_cat_images/cat_1.png',
+            '../30_cat_images/cat_2.png',
+            '../30_cat_images/cat_3.png',
+            '../30_cat_images/cat_4.png',
+            '../30_cat_images/cat_5.png',
+            '../30_cat_images/cat_6.png',
+            '../30_cat_images/cat_7.png',
+            '../30_cat_images/cat_8.png',
+            '../30_cat_images/cat_9.png',
+            '../30_cat_images/cat_10.png',
+            '../30_cat_images/cat_11.png',
+            '../30_cat_images/cat_12.png',
+            '../30_cat_images/cat_13.png',
+            '../30_cat_images/cat_14.png',
+            '../30_cat_images/cat_15.png',
+            '../30_cat_images/cat_16.png',
+            '../30_cat_images/cat_17.png',
+            '../30_cat_images/cat_18.png',
+            '../30_cat_images/cat_10.png',
+            '../30_cat_images/cat_20.png',
+            '../30_cat_images/cat_21.png',
+            '../30_cat_images/cat_22.png',
+            '../30_cat_images/cat_23.png',
+            '../30_cat_images/cat_24.png',
+            '../30_cat_images/cat_25.png',
+            '../30_cat_images/cat_26.png',
+            '../30_cat_images/cat_27.png',
+            '../30_cat_images/cat_28.png',
+            '../30_cat_images/cat_29.png',
+            '../30_cat_images/cat_30.png',
+        ];
+
+        return urls;
+    }
 
     getUrls = () => {
         const {images} = this.props;
@@ -106,14 +146,14 @@ export default class Zip extends React.Component {
         const buttonIcon = this.state.progress > 0 && this.state.progress < 100
             ? ''
             : 'download';
-        const buttonContent = this.state.progress > 0 && this.state.progress < 100
-            ? this.state.progress
+        let buttonContent = this.state.progress > 0 && this.state.progress < 100
+            ? this.state.progress + '% Complete'
             : 'Download Zip'
 
         return (
             <Button 
                 fluid
-                loading={this.props.loading}
+                loading={this.state.loading || this.props.loading}
                 positive
                 disabled={!this.props.images.length > 0}
                 icon={buttonIcon}
