@@ -14,3 +14,4 @@ http://cynamonster.github.io/PicZippr
 - Investigate strange behavior while attempting to open an image lightbox during a zip.
 - Create 'No Results' state.
 - Tap on disabled button triggers search.
+- Can I download a photo album folder to a phone? Since mobile devices cannot open .zip, this would be preferable.
