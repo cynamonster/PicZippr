@@ -10,7 +10,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-grid-gallery": "^0.5.5",
-    "react-scripts": "2.1.8",
+    "react-scripts": "5.0.1",
     "save-as": "^0.1.8",
     "semantic-ui-react": "^0.88.2"
   },
